@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        /* Visit https://aka.ms/tsconfig to read more about this file */
+
+        /* Language and Environment */
+        "target": "ES2022",
+        "lib": ["ESNext", "DOM"],
+        "allowJs": true,
+
+        /* Modules */
+        "module": "commonjs",
+
+        /* Emit */
+        "outDir": "./dist",
+        "removeComments": true,
+        "noEmitOnError": true,
+
+        /* Interop Constraints */
+
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+
+        /* Type Checking */
+        "strict": true,
+
+        /* Completeness */
+        "skipLibCheck": true,
+
+        /* Experimental Options */
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    "include": ["./src", "tsconfig.frontend.json"]
+}

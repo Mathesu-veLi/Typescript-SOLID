@@ -16,7 +16,7 @@ shoppingCart.addItem(new Product('Lápis', 0.9));
 console.log(shoppingCart.items);
 
 console.log(shoppingCart.total());
-console.log(shoppingCart.totalWithDiscount());
+console.log(shoppingCart.totalWithDiscount(0.1));
 
 order.checkout();
 console.log(order.orderStatus);

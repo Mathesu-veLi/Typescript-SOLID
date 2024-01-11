@@ -1,7 +1,7 @@
 import { Discount } from './discount';
 import { CartItem } from './interfaces/cart-item';
 
-export class ShoppingCart {
+export class ShoppingCart implements ShoppingCart {
     private readonly _items: Array<CartItem> = [];
 
     constructor(private readonly discount: Discount) {}

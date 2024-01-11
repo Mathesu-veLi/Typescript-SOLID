@@ -1,15 +1,11 @@
-interface CartItem {
-    name: string;
-    price: number;
-}
-
-type OrderStatus = 'open' | 'closed';
+import { CartItem } from './interfaces/cart-item';
+import { OrderStatus } from './interfaces/order-status';
 
 export class ShoppingCart {
     private readonly _items: Array<CartItem> = [];
     private _orderStatus: OrderStatus = 'open';
 
-    get items(): CartItem[] {
+    get items(): Readonly<CartItem[]> {
         return this._items;
     }
 

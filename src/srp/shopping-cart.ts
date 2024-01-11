@@ -1,16 +1,10 @@
 import { CartItem } from './interfaces/cart-item';
-import { OrderStatus } from './interfaces/order-status';
 
 export class ShoppingCart {
     private readonly _items: Array<CartItem> = [];
-    private _orderStatus: OrderStatus = 'open';
 
     get items(): Readonly<CartItem[]> {
         return this._items;
-    }
-
-    get orderStatus(): OrderStatus {
-        return this._orderStatus;
     }
 
     addItem(item: CartItem): void {
@@ -25,28 +19,8 @@ export class ShoppingCart {
         return +this._items.reduce((total, item) => total + item.price, 0).toFixed(2);
     }
 
-    checkout(): void {
-        if (this.isEmpty()) {
-            console.log('Your cart is empty');
-            return;
-        }
-
-        this._orderStatus = 'closed';
-        this.sendMessage(`Order with a total of R$${this.total()} has been received`);
-        this.saveOrder();
-        this.clear();
-    }
-
     isEmpty(): boolean {
         return this._items.length === 0;
-    }
-
-    sendMessage(msg: string): void {
-        console.log('Message sent: ' + msg);
-    }
-
-    saveOrder(): void {
-        console.log('Order saved');
     }
 
     clear(): void {

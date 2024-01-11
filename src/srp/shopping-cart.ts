@@ -3,12 +3,18 @@ interface CartItem {
     price: number;
 }
 
+type OrderStatus = 'open' | 'closed';
+
 export class ShoppingCart {
     private readonly _items: Array<CartItem> = [];
-    private orderStatus: 'open' | 'closed' = 'open';
+    private _orderStatus: OrderStatus = 'open';
 
     get items(): CartItem[] {
         return this._items;
+    }
+
+    get orderStatus(): OrderStatus {
+        return this._orderStatus;
     }
 
     addItem(item: CartItem): void {
@@ -29,8 +35,8 @@ export class ShoppingCart {
             return;
         }
 
-        this.orderStatus = 'closed';
-        this.sendMessage('Order received');
+        this._orderStatus = 'closed';
+        this.sendMessage(`Order with a total of R$${this.total()} has been received`);
         this.saveOrder();
         this.clear();
     }
@@ -66,5 +72,6 @@ shoppingCart.addItem({
     name: 'Banana',
     price: 30,
 });
-shoppingCart.clear();
 console.log(shoppingCart.items);
+shoppingCart.checkout();
+console.log(shoppingCart.orderStatus);

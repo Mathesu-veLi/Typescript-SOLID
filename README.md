@@ -4,7 +4,7 @@ Este repositório contém exemplos práticos da aplicação dos **princípios SO
 
 A ideia é demonstrar como aplicar **cada um dos 5 princípios de forma correta**, com código limpo, modular e reutilizável.  
 
-> Este projeto foi desenvolvido como forma de estudo a partir do curso do Matheus Miranda ([Curso de JavaScript e TypeScript do básico ao avançado JS/TS](https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado)) na Udemy.
+> Este projeto foi desenvolvido como forma de estudo a partir do curso do Luiz Otávio Miranda ([Curso de JavaScript e TypeScript do básico ao avançado JS/TS](https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado)) na Udemy.
 
 ---
 
